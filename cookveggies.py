@@ -1,16 +1,15 @@
-#Read veggies.csv into a variable "vegetables"
+#READ VEGGIES.CSV
 import csv
-import json
 
-with open('veggies.csv', 'r') as f:
-    reader = csv.DictReader(f)
-    rows = list(reader)
+with open('veggies.py', 'r') as f:
+	reader = csv.DictReader(f)
+	rows = list(reader)
 
-for row in rows:
-    print(row)
-
-#Print the variable "vegetables"
+#PRINT THE VARIABLE 'VEGETABLES'
 print(vegetables)
 
+#CONVERT TO JSON 
 
-#Save to JSON as vegetables.json
+#SAVE 'vegetables' AS VEGETABLES.JSON 
+with open('cookedveggies.json', 'w') as f:
+	json.dump(vegetables, f, indent=2)
