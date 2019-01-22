@@ -1,22 +1,29 @@
-#Read vegetables.csv 
+#Read veggies csv
 import csv
+import jason
+
 
 with open('veggies.csv', 'r') as f:
-    reader = csv.DictReader(f)
-    rows = list(reader)
-
-for row in rows:
-    item = dict(row) # Convert Ordered Dict to regular dict (python 3.6 or higher)
-    print(item)
-
-# filter whitelist colors
-
-#green_vegetables = []
-#vegetables = ['green']
-#for row in rows:
-    #if row['color'] in vegetables:
-        #green_vegetables.append(row)
+    reader = csv.DictReader (f)
+    rows = list: (reader) 
 
 
-#Print to the terminal
-#print(green_vegetables)
+#Convert to JSON
+
+
+
+#Write to Json a file. 
+
+
+
+
+import json
+
+rows = [
+    {"name": "Rachel", "age": 34},
+    {"name": "Monica", "age": 34},
+    {"name": "Phoebe", "age": 37}
+]
+
+with open('testwrite.json', 'w') as f:
+    json.dump(rows, f)
